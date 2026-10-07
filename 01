@@ -1,0 +1,21 @@
+nome_fundo = "Master Alpha Renda Fixa"
+taxa_cdb = 15.0
+teto_regulatorio = 13.0
+risco_critico = False
+
+print("=== ANÁLISE DO FUNDO ===")
+print("Nome do fundo:", nome_fundo)
+print("Taxa oferecida pelo CDB:", taxa_cdb, "%")
+print("Teto regulatório:", teto_regulatorio, "%")
+
+if taxa_cdb > teto_regulatorio:
+    print("\nALERTA CRÍTICO: A taxa do CDB é incompatível com o teto regulatório.")
+    risco_critico = True
+else:
+    print("\nA taxa está dentro da normalidade regulatória.")
+    risco_critico = False
+
+if risco_critico:
+    print("Parecer do Auditor: Ativo bloqueado para novas emissões.")
+else:
+    print("Parecer do Auditor: Ativo liberado para comercialização.")
